@@ -19,6 +19,9 @@
                 <a href="contacto.html">Contacto</a>
             </nav>
             <div class="nav-icons">
+                <button class="icon-btn mobile-menu-btn" aria-label="Menú" id="menu-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
                 <button class="icon-btn" aria-label="Carrito" id="cart-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                     <span class="cart-count">0</span>
@@ -26,6 +29,21 @@
             </div>
         </div>
     </header>
+
+    <!-- Off-Canvas Menu -->
+    <div class="off-canvas-overlay" id="off-canvas-overlay"></div>
+    <div class="off-canvas-menu" id="off-canvas-menu">
+        <div class="off-canvas-header">
+            <span class="logo">La Florería</span>
+            <button class="close-menu-btn" id="close-menu-btn">&times;</button>
+        </div>
+        <nav class="off-canvas-links">
+            <a href="index.html">Inicio</a>
+            <a href="colecciones.html" class="active">Colecciones</a>
+            <a href="flores-amarillas.html">Flores Amarillas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
 
     <!-- Page Header -->
     <div class="page-header" style="background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)), url('assets/hero_banner.jpg');">

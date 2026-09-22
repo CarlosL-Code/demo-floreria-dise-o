@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartCountEl = document.querySelector('.cart-count');
     const toast = document.getElementById('toast');
 
+    // Off-Canvas Menu Elements
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const offCanvasMenu = document.getElementById('off-canvas-menu');
+    const offCanvasOverlay = document.getElementById('off-canvas-overlay');
+
     let currentProduct = null;
     let currentPrice = 0;
     let cartTotalItems = 0;
@@ -94,6 +100,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return true;
     };
+
+    // --- Off-Canvas Menu Logic ---
+    if (menuBtn && closeMenuBtn && offCanvasMenu && offCanvasOverlay) {
+        menuBtn.addEventListener('click', () => {
+            offCanvasMenu.classList.add('active');
+            offCanvasOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        const closeMenu = () => {
+            offCanvasMenu.classList.remove('active');
+            offCanvasOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeMenuBtn.addEventListener('click', closeMenu);
+        offCanvasOverlay.addEventListener('click', closeMenu);
+    }
 
     // Handle Form Submit (Add to cart)
     addToCartForm.addEventListener('submit', (e) => {
