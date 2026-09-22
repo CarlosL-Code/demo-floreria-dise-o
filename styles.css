@@ -340,11 +340,15 @@ a {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 32px;
+}
+
+.collections-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .product-card {
-    background: var(--surface-color);
+    background: var(--bg-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
@@ -454,8 +458,12 @@ a {
         font-size: 1.1rem;
     }
 
-    .product-grid {
+    .product-grid, .collections-grid {
         grid-template-columns: 1fr;
+    }
+
+    .product-image-container {
+        height: 250px;
     }
 
     .modal-grid {
