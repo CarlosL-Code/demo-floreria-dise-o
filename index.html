@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Florería Bga - Demo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">La Florería Bga</a>
+            <nav class="nav-links">
+                <a href="#">Inicio</a>
+                <a href="#catalogo">Colecciones</a>
+                <a href="#flores-amarillas">Flores Amarillas</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="nav-icons">
+                <button class="icon-btn" aria-label="Carrito" id="cart-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Regala momentos inolvidables</h1>
+                <p>Arreglos florales premium, entregas el mismo día en Bucaramanga y área metropolitana.</p>
+                <a href="#catalogo" class="btn btn-primary">Explorar Colección</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalogo" class="catalog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Favoritos</h2>
+                <p>Flores frescas, diseñadas con amor y delicadeza.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/bouquet_angel.jpg" alt="Bouquet Ángel de Amor" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bouquet Ángel de Amor</h3>
+                        <p class="price">$200.000 COP</p>
+                        <button class="btn btn-outline add-to-cart-trigger" data-product="Bouquet Ángel de Amor" data-price="200000" data-img="assets/bouquet_angel.jpg" data-desc="Un hermoso arreglo con rosas rosadas y lirios blancos, ideal para expresar amor puro y sincero. Incluye florero y tarjeta personalizada.">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/bouquet_sol.jpg" alt="Sol Radiante y Dulzura" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sol Radiante y Dulzura</h3>
+                        <p class="price">$150.000 COP</p>
+                        <button class="btn btn-outline add-to-cart-trigger" data-product="Sol Radiante y Dulzura" data-price="150000" data-img="assets/bouquet_sol.jpg" data-desc="Arreglo vibrante con flores amarillas y rosadas pastel. Perfecto para iluminar el día de esa persona especial.">Ver opciones</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/caja_rosas.jpg" alt="Caja de Rosas Premium" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caja de Rosas Premium</h3>
+                        <p class="price">$220.000 COP</p>
+                        <button class="btn btn-outline add-to-cart-trigger" data-product="Caja de Rosas Premium" data-price="220000" data-img="assets/caja_rosas.jpg" data-desc="Elegante caja tipo sombrero (hat box) llena de rosas frescas en tonos pastel. El regalo perfecto de aniversario.">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/bouquet_primavera.jpg" alt="Alegría de Primavera" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alegría de Primavera</h3>
+                        <p class="price">$130.000 COP</p>
+                        <button class="btn btn-outline add-to-cart-trigger" data-product="Alegría de Primavera" data-price="130000" data-img="assets/bouquet_primavera.jpg" data-desc="Un arreglo floral fresco y colorido con tulipanes, margaritas y flores de estación.">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/orquidea_blanca.jpg" alt="Orquídea Blanca Elegance" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Orquídea Blanca Elegance</h3>
+                        <p class="price">$190.000 COP</p>
+                        <button class="btn btn-outline add-to-cart-trigger" data-product="Orquídea Blanca Elegance" data-price="190000" data-img="assets/orquidea_blanca.jpg" data-desc="Sofisticada planta de orquídea blanca en una moderna maceta de cerámica. Larga duración y elegancia pura.">Ver opciones</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yellow Flowers Section -->
+    <section id="flores-amarillas" class="catalog-section" style="background-color: #fff9e6;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Colección Flores Amarillas</h2>
+                <p>Ilumina el día con la vibrante energía del color amarillo.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Yellow Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/flor_amarilla_1.jpg" alt="Rayo de Sol Girasoles" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Rayo de Sol Girasoles</h3>
+                        <p class="price">$160.000 COP</p>
+                        <button class="btn btn-outline add-to-cart-trigger" data-product="Rayo de Sol Girasoles" data-price="160000" data-img="assets/flor_amarilla_1.jpg" data-desc="Espectacular arreglo de girasoles radiantes y rosas amarillas. Perfecto para desear éxito y alegría.">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Yellow Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/flor_amarilla_2.jpg" alt="Caja Luz de Primavera" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caja Luz de Primavera</h3>
+                        <p class="price">$180.000 COP</p>
+                        <button class="btn btn-outline add-to-cart-trigger" data-product="Caja Luz de Primavera" data-price="180000" data-img="assets/flor_amarilla_2.jpg" data-desc="Premium hat box con rosas amarillas en tonos pastel. Elegancia y calidez en un solo detalle.">Ver opciones</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes alguna duda o un pedido especial? Escríbenos.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Atención al Cliente</h3>
+                    <p>Estamos listos para ayudarte a elegir el arreglo perfecto.</p>
+                    <ul class="contact-list">
+                        <li>📍 Cl. 45 #13-65, local, Bucaramanga</li>
+                        <li>📞 +57 310 4843410</li>
+                        <li>✉️ floreriala01@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="contact-form-container">
+                    <form class="customization-form" onsubmit="event.preventDefault(); alert('Mensaje enviado. Te contactaremos pronto.');">
+                        <div class="form-group">
+                            <label>Nombre Completo</label>
+                            <input type="text" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label>Correo Electrónico</label>
+                            <input type="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Mensaje</label>
+                            <textarea rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>La Florería Bga</h4>
+                <p>Cl. 45 #13-65, local, Bucaramanga</p>
+                <p>Tel: +57 310 4843410</p>
+                <p>Email: floreriala01@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Envíos</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 La Florería Bga. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Add to Cart Modal (Simulating missing Shopify features) -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content modal-large">
+            <button class="close-modal" id="close-modal-btn">&times;</button>
+            <div class="modal-body modal-grid">
+                
+                <div class="modal-image-col">
+                    <img src="" alt="Producto" id="modal-product-img">
+                </div>
+                
+                <div class="modal-details-col">
+                    <h2 id="modal-product-title">Nombre del Producto</h2>
+                    <p id="modal-product-price" class="modal-price">$0</p>
+                    <p id="modal-product-desc" class="modal-desc">Descripción del producto.</p>
+                    
+                    <form id="add-to-cart-form" class="customization-form">
+                        
+                        <div class="form-group quantity-group">
+                            <label>Cantidad</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn" id="qty-minus">-</button>
+                                <input type="number" id="qty-input" value="1" min="1" max="20" readonly>
+                                <button type="button" class="qty-btn" id="qty-plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <button type="submit" class="btn btn-outline btn-block">Añadir al Carrito</button>
+                            <button type="button" class="btn btn-primary btn-block" id="buy-now-btn">Comprar ahora</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">Producto añadido al carrito</div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573104843410" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" fill="currentColor">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.2c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
