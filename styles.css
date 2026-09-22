@@ -101,11 +101,11 @@ a {
     transition: var(--transition);
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active {
     color: var(--accent-color);
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after, .nav-links a.active::after {
     width: 100%;
 }
 
@@ -600,39 +600,90 @@ a {
 
 @media (min-width: 768px) {
     .contact-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 60px;
+        align-items: center;
     }
 }
 
-.contact-info h3 {
-    font-size: 1.5rem;
+.premium-info h2 {
+    font-size: 2.2rem;
     color: var(--accent-color);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.contact-info p {
+.premium-info p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 30px;
+}
+
+.premium-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     margin-bottom: 24px;
+}
+
+.premium-list .icon {
+    font-size: 1.5rem;
+    background: var(--primary-light);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.premium-list div {
+    display: flex;
+    flex-direction: column;
+}
+
+.premium-list strong {
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.premium-list span {
     color: var(--text-muted);
 }
 
-.contact-list {
-    list-style: none;
+.premium-form {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
 }
 
-.contact-list li {
-    margin-bottom: 16px;
-    font-size: 1.05rem;
-    color: var(--text-main);
+.form-row {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    gap: 20px;
 }
 
-.contact-form-container {
-    background: var(--bg-color);
-    padding: 32px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
+.form-row .half {
+    flex: 1;
+}
+
+/* Page Header for internal pages */
+.page-header {
+    padding: 80px 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--text-main);
 }
 
 /* WhatsApp Float */
